@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <title>Muestreo de Maduración CARE</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; max-width: 1200px; margin: auto; }
+    body { font-family: sans-serif; padding: 2rem; max-width: 1600px; margin: auto; }
     h1 { color: #146314; border-bottom: 2px solid #146314; padding-bottom: 10px; }
     fieldset { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ccc; }
     legend { font-weight: bold; color: #146314; }
     .bloque { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
-    .campo { flex: 1 1 10%; min-width: 100px; }
+    .campo { flex: 1 1 auto; min-width: 100px; }
     .campo label { font-weight: bold; font-size: 0.9rem; }
     .campo input, .campo select {
       width: 100%; padding: 6px; font-size: 0.9rem;
@@ -29,8 +29,7 @@
 <body>
   <h1>MUESTREO DE MADURACIÓN CARE</h1>
   <form>
-    <fieldset>
-      <legend>Bloque 1 – Identificación del muestreo</legend>
+    <fieldset><legend>Bloque 1 – Identificación del muestreo</legend>
       <div class="bloque">
         <div class="campo"><label>Año</label><input type="number" value="2025"></div>
         <div class="campo"><label>Fecha</label><input type="date"></div>
@@ -39,21 +38,70 @@
       </div>
     </fieldset>
 
-    <fieldset>
-      <legend>Bloque 2 – Identificación de la parcela</legend>
+    <fieldset><legend>Bloque 2 – Identificación de la parcela</legend>
       <div class="bloque">
-        <div class="campo"><label>Bodega/Viticultor</label><select><option>CARE</option><option>Proveedor X</option></select></div>
-        <div class="campo"><label>Zona</label><select><option>CADILLOS</option><option>BANCALES</option></select></div>
-        <div class="campo"><label>Variedad</label><select><option>CABERNET SAUVIGNON</option><option>GARNACHA</option></select></div>
-        <div class="campo"><label>Punto muestreo</label><select><option>FILAS 100-101</option></select></div>
+        <div class="campo"><label>Bodega/Viticultor</label><input type="text"></div>
+        <div class="campo"><label>Zona</label><input type="text"></div>
+        <div class="campo"><label>Variedad</label><input type="text"></div>
+        <div class="campo"><label>Punto muestreo</label><input type="text"></div>
         <div class="campo"><label>Nº Plano</label><input type="number"></div>
         <div class="campo"><label>Tipo punto</label><input type="text"></div>
         <div class="campo"><label>Ensayo</label><input type="text"></div>
       </div>
     </fieldset>
 
-    <fieldset>
-      <legend>Bloque 9 – Análisis CROMOENOS</legend>
+    <fieldset><legend>Bloque 3 – Rendimiento</legend>
+      <div class="bloque">
+        <div class="campo"><label>Kg/Ha</label><input type="number"></div>
+        <div class="campo"><label>Kilos totales</label><input type="number"></div>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Bloque 4 – Ácidos</legend>
+      <div class="bloque">
+        <div class="campo"><label>pH</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>Acidez total (g/L)</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>Ácido málico</label><input type="number" step="0.01"></div>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Bloque 5 – Azúcar y grado</legend>
+      <div class="bloque">
+        <div class="campo"><label>Brix</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>Azúcar (g/L)</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>Grado estimado</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>Densidad mosto</label><input type="number" step="0.0001"></div>
+        <div class="campo"><label>Grado probable</label><input type="number" step="0.01"></div>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Bloque 6 – Peso y Maturox</legend>
+      <div class="bloque">
+        <div class="campo"><label>Peso 100 bayas</label><input type="number"></div>
+        <div class="campo"><label>Volumen</label><input type="number"></div>
+        <div class="campo"><label>Maturox</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>mg azúcar/baya</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>Sólidos por baya</label><input type="number" step="0.01"></div>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Bloque 7 – Absorbancias</legend>
+      <div class="bloque">
+        <div class="campo"><label>A280</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>A320</label><input type="number" step="0.01"></div>
+        <div class="campo"><label>A520</label><input type="number" step="0.01"></div>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Bloque 8 – Nitrógeno</legend>
+      <div class="bloque">
+        <div class="campo"><label>NFA</label><input type="number"></div>
+        <div class="campo"><label>NH2</label><input type="number"></div>
+        <div class="campo"><label>NH4</label><input type="number"></div>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Bloque 9 – CROMOENOS</legend>
       <div class="bloque">
         <div class="campo"><label>CPE</label><input type="number"></div>
         <div class="campo"><label>IMF</label><input type="number"></div>
