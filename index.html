@@ -4,9 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Muestreo de Maduración CARE</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: auto; }
+    fieldset { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ccc; }
+    legend { font-weight: bold; color: #146314; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, select { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+  </style>
 </head>
 <body>
   <h1>MUESTREO DE MADURACIÓN CARE</h1>
-  <p>Formulario en desarrollo con bloques estructurados.</p>
+
+  <form>
+    <fieldset>
+      <legend>Bloque 1 – Identificación del muestreo</legend>
+      <label>Año</label>
+      <input type="number" value="2025">
+      <label>Fecha</label>
+      <input type="date">
+      <label>Vendimiada</label>
+      <select><option>Sí</option><option>No</option></select>
+      <label>Nº Muestreo</label>
+      <input type="number">
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 2 – Identificación de la parcela</legend>
+      <label>Bodega/Viticultor</label>
+      <select><option>CARE</option><option>PROVEEDOR X</option></select>
+      <label>Zona</label>
+      <select><option>CADILLOS</option><option>BANCALES</option></select>
+      <label>Variedad</label>
+      <select><option>CABERNET SAUVIGNON</option><option>GARNACHA</option></select>
+      <label>Punto muestreo</label>
+      <select><option>FILAS 100-101</option><option>FILAS 19-20</option></select>
+      <label>Nº Plano</label>
+      <input type="number">
+      <label>Tipo punto</label>
+      <input type="text">
+      <label>Ensayo</label>
+      <input type="text">
+    </fieldset>
+
+    <input type="submit" value="Guardar">
+  </form>
 </body>
 </html>
