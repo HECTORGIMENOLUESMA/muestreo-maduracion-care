@@ -5,45 +5,92 @@
   <meta charset="UTF-8">
   <title>Muestreo de Maduración CARE</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: auto; }
+    body { font-family: sans-serif; padding: 2rem; max-width: 900px; margin: auto; }
     fieldset { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ccc; }
-    legend { font-weight: bold; color: #146314; }
+    legend { font-weight: bold; color: #146314; padding: 0 10px; }
     label { display: block; margin-top: 1rem; font-weight: bold; }
-    input, select { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+    input, select { width: 100%; padding: 0.4rem; margin-top: 0.25rem; }
+    h1 { color: #222; border-bottom: 2px solid #146314; padding-bottom: 10px; }
   </style>
 </head>
 <body>
   <h1>MUESTREO DE MADURACIÓN CARE</h1>
-
   <form>
     <fieldset>
       <legend>Bloque 1 – Identificación del muestreo</legend>
-      <label>Año</label>
-      <input type="number" value="2025">
-      <label>Fecha</label>
-      <input type="date">
-      <label>Vendimiada</label>
-      <select><option>Sí</option><option>No</option></select>
-      <label>Nº Muestreo</label>
-      <input type="number">
+      <label>Año</label><input type="number" value="2025">
+      <label>Fecha</label><input type="date">
+      <label>Vendimiada</label><select><option>Sí</option><option>No</option></select>
+      <label>Nº Muestreo</label><input type="number">
     </fieldset>
 
     <fieldset>
       <legend>Bloque 2 – Identificación de la parcela</legend>
-      <label>Bodega/Viticultor</label>
-      <select><option>CARE</option><option>PROVEEDOR X</option></select>
-      <label>Zona</label>
-      <select><option>CADILLOS</option><option>BANCALES</option></select>
-      <label>Variedad</label>
-      <select><option>CABERNET SAUVIGNON</option><option>GARNACHA</option></select>
-      <label>Punto muestreo</label>
-      <select><option>FILAS 100-101</option><option>FILAS 19-20</option></select>
-      <label>Nº Plano</label>
-      <input type="number">
-      <label>Tipo punto</label>
-      <input type="text">
-      <label>Ensayo</label>
-      <input type="text">
+      <label>Bodega/Viticultor</label><select><option>CARE</option><option>Proveedor X</option></select>
+      <label>Zona</label><select><option>CADILLOS</option><option>BANCALES</option></select>
+      <label>Variedad</label><select><option>CABERNET SAUVIGNON</option><option>GARNACHA</option></select>
+      <label>Punto muestreo</label><select><option>FILAS 100-101</option></select>
+      <label>Nº Plano</label><input type="number">
+      <label>Tipo punto</label><input type="text">
+      <label>Ensayo</label><input type="text">
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 3 – Rendimiento</legend>
+      <label>Kg/Ha</label><input type="number">
+      <label>Kilos totales</label><input type="number">
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 4 – Ácidos</legend>
+      <label>pH</label><input type="number" step="0.01">
+      <label>Acidez total (g/L)</label><input type="number" step="0.01">
+      <label>Ácido málico</label><input type="number" step="0.01">
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 5 – Azúcar y grado</legend>
+      <label>Brix</label><input type="number" step="0.01">
+      <label>Azúcar (g/L)</label><input type="number" step="0.01" disabled>
+      <label>Grado estimado</label><input type="number" step="0.01" disabled>
+      <label>Densidad mosto</label><input type="number" step="0.0001">
+      <label>Grado probable</label><input type="number" step="0.01" disabled>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 6 – Peso y Maturox</legend>
+      <label>Peso 100 bayas</label><input type="number">
+      <label>Volumen</label><input type="number">
+      <label>Maturox</label><input type="number" step="0.01">
+      <label>mg azúcar/baya</label><input type="number" step="0.01" disabled>
+      <label>Sólidos por baya</label><input type="number" step="0.01" disabled>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 7 – Absorbancias</legend>
+      <label>A280</label><input type="number" step="0.01">
+      <label>A320</label><input type="number" step="0.01">
+      <label>A520</label><input type="number" step="0.01">
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 8 – Nitrógeno</legend>
+      <label>NFA</label><input type="number">
+      <label>NH2</label><input type="number">
+      <label>NH4</label><input type="number">
+    </fieldset>
+
+    <fieldset>
+      <legend>Bloque 9 – CROMOENOS</legend>
+      <label>CPE</label><input type="number">
+      <label>IMF</label><input type="number">
+      <label>IPT</label><input type="number">
+      <label>CP FA</label><input type="number">
+      <label>CP FML</label><input type="number">
+      <label>ANT</label><input type="number">
+      <label>TAN</label><input type="number">
+      <label>ANT pH 3.2</label><input type="number">
+      <label>%MP</label><input type="number">
     </fieldset>
 
     <input type="submit" value="Guardar">
